@@ -1,17 +1,46 @@
 package org.example;
 
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+        //testes exercicio 1
+        Produto p1 = new Produto("Impressora",1000,3);
+        //produto com o nome vazio
+        Produto p2 = new Produto("",2000,3);
+        //produto com o nome nulo
+        Produto p3 = new Produto(null,3000,1);
+        //produto com o preço negativo
+        Produto p4 = new Produto("Notebook", -4000, 2);
+        // produto com a qtdEstoque negativo
+        Produto p5 = new Produto("Roteador", 200, -3);
+        // produto com todas as entradas invalidas
+        Produto p6 = new Produto(null, -6, -5);
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+        /*
+        //testes exercicio 2
+        System.out.println(p1.toString());
+        p1.aplicarDesconto(20);
+        System.out.println(p1.toString());
+
+        // desconto invalido
+        Produto p7 = new Produto("Fone", 150, 5);
+        System.out.println(p7.toString());
+        p7.aplicarDesconto(60);
+        */
+
+        //TESTES EXERCICIO 3
+        List<Funcionario> funcionarios = new ArrayList<>();
+        funcionarios.add(new Funcionario("Ana", new BigDecimal("3000")));
+        funcionarios.add(new Gerente("Bia", new BigDecimal("5000")));
+        funcionarios.add(new Desenvolvedor("Rose", new BigDecimal("4000")));
+
+        for(Funcionario f: funcionarios){
+            System.out.println(f.toString());
         }
     }
 }
