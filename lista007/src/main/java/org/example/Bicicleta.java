@@ -1,0 +1,27 @@
+package org.example;
+
+public class Bicicleta implements IMeioTransporte{
+    private int velocidade;
+
+    public Bicicleta(int velocidade) {
+        this.velocidade = velocidade;
+    }
+
+    public int getVelocidade() {
+        return velocidade;
+    }
+
+    public void setVelocidade(int velocidade) {
+        this.velocidade = this.velocidade + velocidade;
+    }
+
+    @Override
+    public void frear() {
+        setVelocidade(-10);
+    }
+
+    @Override
+    public void acelerar() {
+        setVelocidade(10);
+    }
+}
