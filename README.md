@@ -3,3 +3,5 @@
 
 #### Cada exercício está em uma pasta, somente o 1 e 2 contêm uma pasta em comum pois utilizam a mesma classe.
 Cada uma das pastas contêm uma classe Main onde estão os testes do exercício.
+
+O caminho para os exercícios é lista007 > src > execio1e2 
