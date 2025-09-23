@@ -1,8 +1,8 @@
-package org.example;
+package org.example.exercicio5;
 
 import java.math.BigDecimal;
 
-public class CartaoCredito extends FormaPagamento{
+public class CartaoCredito extends FormaPagamento {
     private String numeroCartao;
 
     public CartaoCredito(String numeroCartao) {

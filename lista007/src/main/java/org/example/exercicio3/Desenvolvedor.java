@@ -1,8 +1,8 @@
-package org.example;
+package org.example.exercicio3;
 
 import java.math.BigDecimal;
 
-public class Desenvolvedor extends Funcionario{
+public class Desenvolvedor extends Funcionario {
     public Desenvolvedor(String nome, BigDecimal salario) {
         super(nome, salario);
     }

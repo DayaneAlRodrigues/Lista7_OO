@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exercicio3;
 
 import java.math.BigDecimal;
 

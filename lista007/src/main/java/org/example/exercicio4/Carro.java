@@ -1,14 +1,14 @@
-package org.example;
+package org.example.exercicio4;
 
-public class Bicicleta implements IMeioTransporte{
+public class Carro implements IMeioTransporte {
     private int velocidade;
-
-    public Bicicleta(int velocidade) {
-        this.velocidade = velocidade;
-    }
 
     public int getVelocidade() {
         return velocidade;
+    }
+
+    public Carro(int velocidade) {
+        this.velocidade = velocidade;
     }
 
     public void setVelocidade(int velocidade) {
@@ -17,7 +17,7 @@ public class Bicicleta implements IMeioTransporte{
 
     @Override
     public void frear() {
-        setVelocidade(-10);
+        setVelocidade(- 5);
     }
 
     @Override

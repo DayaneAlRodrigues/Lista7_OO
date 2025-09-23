@@ -1,6 +1,6 @@
-package org.example;
+package org.example.exercicio4;
 
-public class Trem implements IMeioTransporte{
+public class Trem implements IMeioTransporte {
     private int velocidade;
 
     public Trem(int velocidade) {

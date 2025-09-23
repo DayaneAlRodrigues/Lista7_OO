@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exercicio5;
 
 public class PagamentoInvalidoException extends Exception {
 
