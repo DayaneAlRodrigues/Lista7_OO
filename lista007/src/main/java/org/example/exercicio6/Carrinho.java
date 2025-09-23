@@ -1,7 +1,5 @@
 package org.example.exercicio6;
 
-import org.example.exercicio1e2.Produto;
-
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -24,7 +22,7 @@ public class Carrinho {
         this.cupomDesconto = Objects.requireNonNull(cupomDesconto);
     }
 
-    public Carrinho adicionar(ProdutoCarrinho produto, int quantidade){
+    public Carrinho adicionarItem(Produto produto, int quantidade){
         List<ItemCarrinho> novosItens = new ArrayList<>(this.itens);
         Optional<ItemCarrinho> itemExistente = novosItens.stream().filter(i -> i.getProduto().equals(produto)).findFirst();
 
@@ -38,7 +36,7 @@ public class Carrinho {
         return new Carrinho(novosItens, this.cupomDesconto);
     }
 
-    public Carrinho removerItem(Produto produto) {
+    public Carrinho removerItem(org.example.exercicio1e2.Produto produto) {
         List<ItemCarrinho> novosItens = this.itens.stream()
                 .filter(item -> !item.getProduto().equals(produto))
                 .collect(Collectors.toList());

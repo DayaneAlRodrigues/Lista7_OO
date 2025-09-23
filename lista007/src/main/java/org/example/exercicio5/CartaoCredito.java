@@ -6,15 +6,20 @@ public class CartaoCredito extends FormaPagamento {
     private String numeroCartao;
 
     public CartaoCredito(String numeroCartao) {
-        this.numeroCartao = numeroCartao;
+        try {
+            if(validarPagamento())
+                this.numeroCartao = numeroCartao;
+        }catch (PagamentoInvalidoException error){
+            System.out.println(error);
+        }
     }
 
     @Override
-    public void validarPagamento() throws PagamentoInvalidoException {
-        if (this.numeroCartao == null || this.numeroCartao.length() != 16 )
+    public boolean validarPagamento() throws PagamentoInvalidoException {
+        if (numeroCartao == null || numeroCartao.length() != 16 )
             throw new PagamentoInvalidoException("Número do cartão inválido");
 
-        System.out.println("Pagamento validado");
+        return true;
     }
 
     @Override

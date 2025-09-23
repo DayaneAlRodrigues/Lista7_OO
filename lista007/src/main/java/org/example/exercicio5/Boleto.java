@@ -7,14 +7,20 @@ public class Boleto extends FormaPagamento {
     private String codigoBarrras;
 
     public Boleto(String codigoBarrras) {
-        this.codigoBarrras = codigoBarrras;
+
+        try {
+            if(validarPagamento())
+                this.codigoBarrras = codigoBarrras;
+        }catch (PagamentoInvalidoException error){
+            System.out.println(error);
+        }
     }
 
     @Override
-    public void validarPagamento() throws PagamentoInvalidoException {
-        if(this.codigoBarrras == null || this.codigoBarrras.trim().isEmpty())
+    public boolean validarPagamento() throws PagamentoInvalidoException {
+        if(codigoBarrras == null || codigoBarrras.trim().isEmpty())
             throw new PagamentoInvalidoException("O código de barras está incorreto!");
-        System.out.println("Pagamento validado");
+        return true;
     }
 
     @Override

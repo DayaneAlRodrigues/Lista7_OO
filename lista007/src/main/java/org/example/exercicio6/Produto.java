@@ -2,11 +2,11 @@ package org.example.exercicio6;
 
 import java.util.Objects;
 
-public class ProdutoCarrinho {
+public class Produto {
     private final String nome;
     private final Dinheiro preco;
 
-    public ProdutoCarrinho(String nome, Dinheiro preco) {
+    public Produto(String nome, Dinheiro preco) {
         this.nome = Objects.requireNonNull(nome);
         this.preco = Objects.requireNonNull(preco);
     }

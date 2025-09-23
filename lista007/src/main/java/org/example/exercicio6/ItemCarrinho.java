@@ -4,10 +4,10 @@ import java.math.BigDecimal;
 import java.util.Objects;
 
 public class ItemCarrinho {
-    private final ProdutoCarrinho produto;
+    private final Produto produto;
     private final int quantidade;
 
-    public ItemCarrinho(ProdutoCarrinho produto, int quantidade) {
+    public ItemCarrinho(Produto produto, int quantidade) {
         if(quantidade < 1)
             throw new IllegalArgumentException("A quantidade deve ser maior que zero");
 
@@ -15,7 +15,7 @@ public class ItemCarrinho {
         this.quantidade = quantidade;
     }
 
-    public ProdutoCarrinho getProduto() {
+    public Produto getProduto() {
         return produto;
     }
 

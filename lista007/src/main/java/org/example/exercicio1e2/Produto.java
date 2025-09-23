@@ -6,9 +6,9 @@ public class Produto {
     private int qtdEstoque;
 
     public Produto(String nome, double preco, int qtdEstoque) {
-        this.nome = nome;
-        this.preco = preco;
-        this.qtdEstoque = qtdEstoque;
+        this.setNome(nome);
+        this.setPreco(preco);
+        this.setQtdEstoque(qtdEstoque);
     }
 
     public String getNome() {

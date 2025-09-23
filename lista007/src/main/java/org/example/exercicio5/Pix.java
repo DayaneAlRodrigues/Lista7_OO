@@ -6,15 +6,21 @@ public class Pix extends FormaPagamento {
     private String chavePix;
 
     public Pix(String chavePix) {
-        this.chavePix = chavePix;
+        try{
+            if(validarPagamento())
+                this.chavePix = chavePix;
+        }catch (PagamentoInvalidoException error){
+            System.out.println(error);
+        }
+
     }
 
     @Override
-    public void validarPagamento() throws PagamentoInvalidoException {
-        if(this.chavePix == null || this.chavePix.trim().isEmpty())
+    public boolean validarPagamento() throws PagamentoInvalidoException {
+        if(chavePix == null || chavePix.trim().isEmpty())
             throw new PagamentoInvalidoException("Chave pix inválida");
 
-        System.out.println("Pagamento validado");
+        return true;
     }
 
     @Override
